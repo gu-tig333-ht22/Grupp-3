@@ -31,6 +31,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: const Icon(Icons.local_bar, color: Color.fromARGB(255, 255, 143, 0), size: 50,),
       ),
       body: Center(
