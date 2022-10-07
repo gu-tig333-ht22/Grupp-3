@@ -22,7 +22,7 @@ Widget headerMenu(text) {
   );
 }
 
-Widget kort(Drink drink) {
+Widget drinkItemSmall(Drink drink) {
   return Card(
     clipBehavior: Clip.antiAlias,
     child: Column(children: [
@@ -32,7 +32,7 @@ Widget kort(Drink drink) {
         title: Text(drink.name),
         subtitle: Text(drink.threeIngredients), //Om längre än 2 rader fixa ...
         trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.favorite), constraints: BoxConstraints(), padding: EdgeInsets.all(0),),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border_outlined), constraints: BoxConstraints(), padding: EdgeInsets.all(0),),
           IconButton(onPressed: () {}, icon: const Icon(Icons.delete),constraints: BoxConstraints()),
         ]),
       )

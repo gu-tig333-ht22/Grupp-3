@@ -3,14 +3,16 @@ import 'package:template/model.dart';
 import 'package:template/widgets.dart';
 import '';
 
-class searchTab extends StatelessWidget {
+class SearchTab extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         children: [
           searchHeaderMenu(),
-          kort(testlista[0]),
+          drinkItemSmall(testlista[0]),
         ],
       ),
     );
