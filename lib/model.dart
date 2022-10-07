@@ -14,4 +14,8 @@ class Drink {
   bool favorite = false;
 
   Drink(this.id, this.image, this.name, this.ingredients, this.descreption, this.alcohol,);
+
+  get threeIngredients { //Skriv om så den kan hantera drinnkar med mindre än 3 ingredienser 
+    return "${ingredients.keys.elementAt(0)}, ${ingredients.keys.elementAt(1)}, ${ingredients.keys.elementAt(2)}  ";
+  } // om fler ingredienser finnns än de som visas lägg till ...
 }
