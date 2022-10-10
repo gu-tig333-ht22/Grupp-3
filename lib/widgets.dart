@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:template/drinkView.dart';
+import 'package:template/searchView.dart';
 import 'model.dart';
 
 Widget headerMenu(text) {
@@ -22,20 +24,20 @@ Widget headerMenu(text) {
   );
 }
 
-Widget drinkItemSmall(Drink drink) {
-  return Card(
-    clipBehavior: Clip.antiAlias,
-    child: Column(children: [
+
+Widget drinkItemSmall(Drink drink, context) {
+  return 
       ListTile(
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => DrinkView()));
+        },
         leading: Image.network(
-            "https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg"),
+            drink.image),
         title: Text(drink.name),
         subtitle: Text(drink.threeIngredients), //Om längre än 2 rader fixa ...
         trailing: Row(mainAxisSize: MainAxisSize.min, children: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border_outlined), constraints: BoxConstraints(), padding: EdgeInsets.all(0),),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.delete),constraints: BoxConstraints()),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.shop),constraints: BoxConstraints()),
         ]),
-      )
-    ]),
-  );
+      );
 }
