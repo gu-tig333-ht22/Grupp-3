@@ -12,24 +12,27 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
+        toolbarHeight: 82,
         centerTitle: true,
-        title: Column(
-          children: [
-            Container(
-              height: 5,
-            ),
-            const Icon(
-              Icons.local_bar,
-              color: Color.fromARGB(255, 255, 143, 0),
-              size: 50,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                  hintText: "Search by ingredients or drinks..."),
-              textAlign: TextAlign.center,
-            )
-          ],
+        title: Padding(
+          padding: const EdgeInsets.only(top:8.0),
+          child: Column(
+            children: [
+              Container(
+                height: 5,
+              ),
+              const Icon(
+                Icons.local_bar,
+                color: Color.fromARGB(255, 255, 143, 0),
+                size: 50,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    hintText: "Search by ingredients or drinks..."),
+                textAlign: TextAlign.center,
+              )
+            ],
+          ),
         ),
         actions: [_popMenu()],
       ),
@@ -37,24 +40,27 @@ class SearchView extends StatelessWidget {
         child: Column(children: [drinkItemSmall(testlista[0], context)]),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.calculate, size: 40)),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  size: 40,
-                  color: Color.fromARGB(255, 255, 143, 0),
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.local_bar,
-                  size: 40,
-                ))
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(bottom:15.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(onPressed: () {}, icon: Icon(Icons.calculate, size: 40)),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.search,
+                    size: 40,
+                    color: Color.fromARGB(255, 255, 143, 0),
+                  )),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.local_bar,
+                    size: 40,
+                  ))
+            ],
+          ),
         ),
       ),
     );
