@@ -45,7 +45,7 @@ class DrinkView extends StatelessWidget {
             ),
           ),
           Container(
-            height: 250,
+            height: 230,
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
@@ -58,8 +58,9 @@ class DrinkView extends StatelessWidget {
           margin: const EdgeInsets.all(5),
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 205, 158, 158),
-            borderRadius: BorderRadius.all(Radius.circular(20))),
+            color: Color.fromARGB(255, 249, 249, 249),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            boxShadow:[ const BoxShadow(blurRadius: 1, offset: Offset(0, 1), )]),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -70,10 +71,12 @@ class DrinkView extends StatelessWidget {
                   Text("Ingredients", style: TextStyle(fontWeight: FontWeight.bold),),
                   Container(child: Row(children: [
                     FloatingActionButton.small(
+                      heroTag: "tag1", //Oklart varför de bevös, men får error vid 2st floatingbuttons...
                       backgroundColor: Colors.white,
                       onPressed: () {}, child: Icon(Icons.favorite_border_outlined, color: Colors.black,)),
                     Container(width: 10,),
                     FloatingActionButton.small(
+                      heroTag: "tag2", //Oklart varför de bevös, men får error vid 2st floatingbuttons..
                       backgroundColor: Colors.white,
                       onPressed: () {}, child: Icon(Icons.add_shopping_cart, color: Colors.black))
                    ],),)

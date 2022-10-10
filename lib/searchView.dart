@@ -46,6 +46,7 @@ class SearchView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(onPressed: () {}, icon: Icon(Icons.calculate, size: 40)),
+              Container(height: 50,child: VerticalDivider(thickness: 2,)),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
@@ -53,6 +54,7 @@ class SearchView extends StatelessWidget {
                     size: 40,
                     color: Color.fromARGB(255, 255, 143, 0),
                   )),
+              Container(height: 50,child: VerticalDivider(thickness: 2,)),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
