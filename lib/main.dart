@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import './homepage.dart';
+import 'package:template/drinkView.dart';
+import 'package:template/model.dart';
+import 'searchView.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
          backgroundColor: Color.fromARGB(243, 243, 243, 243)
         ),
       ),
-      home: MyStatefulWidget(),
+      home: SearchView(),
     );
   }
 }
