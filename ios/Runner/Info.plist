@@ -45,5 +45,10 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+<<<<<<< HEAD
+=======
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
 </dict>
 </plist>

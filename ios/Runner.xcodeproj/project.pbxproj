@@ -3,7 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
+<<<<<<< HEAD
 	objectVersion = 50;
+=======
+	objectVersion = 54;
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -171,6 +175,10 @@
 /* Begin PBXShellScriptBuildPhase section */
 		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
 			isa = PBXShellScriptBuildPhase;
+<<<<<<< HEAD
+=======
+			alwaysOutOfDate = 1;
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -185,6 +193,10 @@
 		};
 		9740EEB61CF901F6004384FC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
+<<<<<<< HEAD
+=======
+			alwaysOutOfDate = 1;
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
 			buildActionMask = 2147483647;
 			files = (
 			);
