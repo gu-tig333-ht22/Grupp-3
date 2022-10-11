@@ -3,14 +3,14 @@ import 'package:template/calculatorTab.dart';
 import 'package:template/mydrinkstab.dart';
 import 'package:template/searchTab.dart';
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   static TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -21,10 +21,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     ,
   ];
 
-  void _onItemTapped(int index) {
+   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  static void hejhej() {
+    print("object");
   }
 
   @override

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
          backgroundColor: Color.fromARGB(243, 243, 243, 243)
         ),
       ),
-      home: MyStatefulWidget(),
+      home: HomePage(),
     );
   }
 }
