@@ -29,7 +29,7 @@ Widget drinkItemSmall(Drink drink, context) {
   return 
       ListTile(
         onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => DrinkView()));
+          Navigator.of(context).push(_createRoute());
         },
         leading: Image.network(
             drink.image),
@@ -37,7 +37,27 @@ Widget drinkItemSmall(Drink drink, context) {
         subtitle: Text(drink.threeIngredients), //Om längre än 2 rader fixa ...
         trailing: Row(mainAxisSize: MainAxisSize.min, children: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border_outlined), constraints: BoxConstraints(), padding: EdgeInsets.all(0),),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.shop),constraints: BoxConstraints()),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.add_shopping_cart),constraints: BoxConstraints()),
         ]),
       );
+
+  
+}
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => const DrinkView(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }

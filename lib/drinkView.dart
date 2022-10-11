@@ -13,20 +13,17 @@ class DrinkView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           automaticallyImplyLeading: false, //ÄNDRA TILL FALSE
-          toolbarHeight: 82,
+          toolbarHeight: 87,
           centerTitle: true,
-          title: Column(
-            children: [
-              Container(
-                height: 5,
-              ),
-              const Icon(
-                Icons.local_bar,
-                color: Color.fromARGB(255, 255, 143, 0),
-                size: 50,
-              ),
-            ],
-          )),
+          title: 
+              Padding(
+                padding: const EdgeInsets.only(bottom:0.0),
+                child: const Icon(
+                  Icons.local_bar,
+                  color: Color.fromARGB(255, 255, 143, 0),
+                  size: 50,
+                        ),
+              )),
       body: Center(
         child: Column(children: [
           Padding(
@@ -54,43 +51,46 @@ class DrinkView extends StatelessWidget {
               ),
             ),
           ),
-        Container(
-          margin: const EdgeInsets.all(5),
-          padding: EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 249, 249, 249),
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            boxShadow:[ const BoxShadow(blurRadius: 1, offset: Offset(0, 1), )]),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-               // VAD HAR VI GJORT?
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        Expanded(
+          child: Container(
+            height:300,
+            margin: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 20),
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 249, 249, 249),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              boxShadow:[ const BoxShadow(blurRadius: 1, offset: Offset(0, 1), )]),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Ingredients", style: TextStyle(fontWeight: FontWeight.bold),),
-                  Container(child: Row(children: [
-                    FloatingActionButton.small(
-                      heroTag: "tag1", //Oklart varför de bevös, men får error vid 2st floatingbuttons...
-                      backgroundColor: Colors.white,
-                      onPressed: () {}, child: Icon(Icons.favorite_border_outlined, color: Colors.black,)),
-                    Container(width: 10,),
-                    FloatingActionButton.small(
-                      heroTag: "tag2", //Oklart varför de bevös, men får error vid 2st floatingbuttons..
-                      backgroundColor: Colors.white,
-                      onPressed: () {}, child: Icon(Icons.add_shopping_cart, color: Colors.black))
-                   ],),)
-                ],
-              ),
-              Text("4 cl vodka",),
-              Text("2 cl limejuice",),
-              Text("10 cl sodavatten",),
-              Container(height: 20,),
-              Text("Directions", style: TextStyle(fontWeight: FontWeight.bold),),
-              Text("Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.")
-              
-            ],),
-          )
+                 // VAD HAR VI GJORT?
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Ingredients", style: TextStyle(fontWeight: FontWeight.bold),),
+                    Container(child: Row(children: [
+                      FloatingActionButton.small(
+                        heroTag: "tag1", //Oklart varför de bevös, men får error vid 2st floatingbuttons...
+                        backgroundColor: Colors.white,
+                        onPressed: () {}, child: Icon(Icons.favorite_border_outlined, color: Colors.black,)),
+                      Container(width: 10,),
+                      FloatingActionButton.small(
+                        heroTag: "tag2", //Oklart varför de bevös, men får error vid 2st floatingbuttons..
+                        backgroundColor: Colors.white,
+                        onPressed: () {}, child: Icon(Icons.add_shopping_cart, color: Colors.black))
+                     ],),)
+                  ],
+                ),
+                Text("4 cl vodka",),
+                Text("2 cl limejuice",),
+                Text("10 cl sodavatten",),
+                Container(height: 20,),
+                Text("Directions", style: TextStyle(fontWeight: FontWeight.bold),),
+                Text("Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.")
+                
+              ],),
+            ),
+        )
         ]),
       ),
     );

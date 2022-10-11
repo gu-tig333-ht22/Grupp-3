@@ -12,27 +12,24 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 82,
+        toolbarHeight: 87,
         centerTitle: true,
+        leading: Container(), //För att centrera tillsvidare 
         title: Padding(
-          padding: const EdgeInsets.only(top:8.0),
-          child: Column(
-            children: [
-              Container(
-                height: 5,
-              ),
-              const Icon(
-                Icons.local_bar,
-                color: Color.fromARGB(255, 255, 143, 0),
-                size: 50,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    hintText: "Search by ingredients or drinks..."),
-                textAlign: TextAlign.center,
-              )
-            ],
-          ),
+          padding: const EdgeInsets.only(top:0),
+          child: const Icon(
+                  Icons.local_bar,
+                  color: Color.fromARGB(255, 255, 143, 0),
+                  size: 50,
+                ),
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.zero,
+          child: TextField(
+          decoration: InputDecoration(
+              hintText: "Search by ingredients or drinks..."),
+          textAlign: TextAlign.center,
+        ),
         ),
         actions: [_popMenu()],
       ),
@@ -45,8 +42,8 @@ class SearchView extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.calculate, size: 40)),
-              Container(height: 50,child: VerticalDivider(thickness: 2,)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart_outlined, size: 40)),
+              
               IconButton(
                   onPressed: () {},
                   icon: Icon(
@@ -54,7 +51,7 @@ class SearchView extends StatelessWidget {
                     size: 40,
                     color: Color.fromARGB(255, 255, 143, 0),
                   )),
-              Container(height: 50,child: VerticalDivider(thickness: 2,)),
+              
               IconButton(
                   onPressed: () {},
                   icon: Icon(
