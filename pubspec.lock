@@ -81,6 +81,11 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3fb998e5dcd6bcd386faa485d151e03907d9489c
   js:
     dependency: transitive
     description:
@@ -88,6 +93,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.4"
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
+>>>>>>> 3fb998e5dcd6bcd386faa485d151e03907d9489c
   lints:
     dependency: transitive
     description:
@@ -108,7 +117,15 @@ packages:
       name: material_color_utilities
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.2.0"
+=======
+<<<<<<< HEAD
+    version: "0.1.5"
+=======
+    version: "0.2.0"
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
+>>>>>>> 3fb998e5dcd6bcd386faa485d151e03907d9489c
   meta:
     dependency: transitive
     description:
@@ -134,7 +151,15 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.9.1"
+=======
+<<<<<<< HEAD
+    version: "1.9.0"
+=======
+    version: "1.9.1"
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
+>>>>>>> 3fb998e5dcd6bcd386faa485d151e03907d9489c
   stack_trace:
     dependency: transitive
     description:
@@ -148,7 +173,15 @@ packages:
       name: stream_channel
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.1"
+=======
+<<<<<<< HEAD
+    version: "2.1.0"
+=======
+    version: "2.1.1"
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
+>>>>>>> 3fb998e5dcd6bcd386faa485d151e03907d9489c
   string_scanner:
     dependency: transitive
     description:
@@ -169,7 +202,15 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.4.14"
+=======
+<<<<<<< HEAD
+    version: "0.4.12"
+=======
+    version: "0.4.14"
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
+>>>>>>> 3fb998e5dcd6bcd386faa485d151e03907d9489c
   typed_data:
     dependency: transitive
     description:
@@ -183,6 +224,18 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.4"
 sdks:
   dart: ">=2.18.0 <3.0.0"
+=======
+<<<<<<< HEAD
+    version: "2.1.2"
+sdks:
+  dart: ">=2.17.6 <3.0.0"
+=======
+    version: "2.1.4"
+sdks:
+  dart: ">=2.18.0 <3.0.0"
+>>>>>>> parent of 7ed7872 (allt bort igen, lättast så)
+>>>>>>> 3fb998e5dcd6bcd386faa485d151e03907d9489c
